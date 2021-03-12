@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_round_back_white">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/msgType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF333333"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF999999"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+
+        <com.xuexiang.xui.widget.button.shadowbutton.ShadowButton
+            android:id="@+id/refused"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/shape_msg_refused"
+            android:text="拒绝"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:paddingTop="2dp"
+            android:visibility="gone"
+            app:sb_radius="20dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="15dp" />
+
+        <com.xuexiang.xui.widget.button.shadowbutton.ShadowButton
+            android:id="@+id/pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/refused"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/shape_safety_add"
+            android:text="接受"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:paddingTop="2dp"
+            app:sb_radius="20dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:id="@+id/inviteType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="15dp"
+            android:textColor="#FF333333"
+            android:visibility="gone"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

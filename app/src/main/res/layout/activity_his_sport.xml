@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<!--    <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/srl"-->
+<!--        app:srlEnableOverScrollBounce="true"-->
+<!--        app:srlEnableRefresh="true"-->
+<!--        app:srlEnableAutoLoadMore="false"-->
+<!--        app:srlEnableLoadMore="false"-->
+<!--        app:srlEnableScrollContentWhenRefreshed="true">-->
+<!--        <com.scwang.smartrefresh.layout.header.BezierRadarHeader-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#56D6B3"-->
+<!--            app:layout_srlBackgroundColor="#56D6B3"-->
+<!--            />-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#e7e7e7"
+            android:layout_height="match_parent">
+
+            <com.hjq.bar.TitleBar
+                android:id="@+id/titlebar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/white"
+                app:titleSize="17sp"
+                app:backButton="true"
+                app:titleStyle="bold"
+                app:leftIcon="@mipmap/picker_icon_back_black"
+                app:lineVisible="true"
+                app:title="历史轨迹"
+                app:rightColor="@color/white"
+                app:titleColor="#333333"
+                tools:ignore="MissingDefaultResource" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tablayout"
+                app:tabMode="scrollable"
+                android:background="@color/white"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorColor="@android:color/holo_red_light"
+                app:tabIndicatorHeight="2dp"
+                app:tabMinWidth="100dp"
+                app:tabSelectedTextColor="@android:color/holo_red_light"
+                />
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewPager"
+                />
+
+
+        </LinearLayout>
+<!--    </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/xui_transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout
+        android:id="@+id/addFriend"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_theme_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="35dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/jia"
+            android:drawablePadding="4dp"
+            android:textColor="@color/white"
+            android:text="添加我关心的人"/>
+
+    </com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/foot_img1"
+            android:textSize="12sp"
+            android:drawablePadding="4dp"
+            android:text="银行级数据加密"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/foot_img2"
+            android:drawablePadding="4dp"
+            android:textSize="12sp"
+            android:text="用户隐私安全有保障"/>
+    </LinearLayout>
+<!--    <com.xuexiang.xui.widget.button.shadowbutton.ShadowButton-->
+<!--        android:id="@+id/btnLogin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:background="@drawable/shape_theme_btn"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:sb_radius="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:drawableLeft="@mipmap/jia"-->
+<!--        android:text="发的"-->
+<!--        />-->
+
+
+</LinearLayout>

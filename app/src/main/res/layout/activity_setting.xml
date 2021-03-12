@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".ui.activity.SettingActivity">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/white_titlebar"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorEEEEEE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_user_agreement"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/style_mine_rl">
+
+            <TextView
+                style="@style/style_mine_tv"
+                android:text="用户协议" />
+
+            <ImageView
+                style="@style/style_arrow_right"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorEEEEEE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_privacy"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/style_mine_rl">
+
+            <TextView
+                style="@style/style_mine_tv"
+                android:text="隐私条例" />
+
+            <ImageView
+                style="@style/style_arrow_right"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorEEEEEE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_about_us"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/style_mine_rl">
+
+            <TextView
+                style="@style/style_mine_tv"
+                android:text="关于我们" />
+
+            <ImageView
+                style="@style/style_arrow_right"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2f2f2">
+
+            <com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout
+                android:id="@+id/logOut"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_theme_btn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/white"
+                    android:text="退出登录"/>
+
+            </com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simpleBarHeight"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        app:titleSize="17sp"
+        app:backButton="true"
+        app:titleStyle="bold"
+        app:leftIcon="@mipmap/leftarrow"
+        app:lineVisible="false"
+        app:titleColor="@color/whiteTilte"
+        tools:ignore="MissingDefaultResource" />
+</layout>
+

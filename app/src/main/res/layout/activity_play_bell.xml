@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.PlayBellActivity"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/white_titlebar"/>
+
+        <ImageView
+            android:id="@+id/playBellBtn"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@mipmap/play_bell_icon"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="13sp"
+            android:textColor="#FF999999"
+            android:layout_marginBottom="90dp"
+            android:text="注意: 一键警铃开启后，将会以手机扬声器最大音量
+播放报警铃声，请谨慎使用该功能"/>
+
+    </RelativeLayout>
+</layout>

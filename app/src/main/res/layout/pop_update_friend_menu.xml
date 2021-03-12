@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/rl_relationship"
+                android:background="?android:attr/selectableItemBackground"
+                style="@style/style_mine_rl"
+                android:layout_height="50dp">
+
+                <TextView
+                    style="@style/style_mine_tv"
+                    android:text="解除好友关系" />
+
+                <ImageView
+                    style="@style/style_arrow_right"
+                    android:layout_marginRight="15dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorEEEEEE"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_note"
+                android:background="?android:attr/selectableItemBackground"
+                style="@style/style_mine_rl"
+                android:layout_height="50dp">
+
+                <TextView
+                    style="@style/style_mine_tv"
+                    android:text="修改好友备注" />
+
+                <ImageView
+                    style="@style/style_arrow_right"
+                    android:layout_marginRight="15dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorEEEEEE"/>
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/sbHideLocation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="隐藏位置"
+                app:sRightViewType="switchBtn"
+                app:sSwitchIsChecked="false"
+                app:sThumbResource="@drawable/thumb"
+                app:sTrackResource="@drawable/track" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

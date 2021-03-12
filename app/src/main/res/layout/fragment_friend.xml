@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="#F2F2F2"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapse_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:expandedTitleTextAppearance="@style/TitleTheme">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="#F2F2F2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_collapseMode="parallax">
+
+                    <ImageView
+                        android:id="@+id/top"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="50dp"
+                        android:scaleType="fitXY"
+                        app:layout_collapseMode="parallax"
+                        android:src="@mipmap/friendtopback" />
+                    <ImageView
+                        android:id="@+id/openVip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_friend_vip"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginBottom="10dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--            <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="match_parent"-->
+                <!--                android:fitsSystemWindows="true"-->
+                <!--                android:scaleType="centerCrop"-->
+                <!--                android:src="@drawable/top"-->
+                <!--                app:layout_collapseMode="parallax" />-->
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/appbar_layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:contentInsetStart="0dp"
+                    app:elevation="0dp"
+                    android:visibility="gone"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:titleTextColor="@color/white" >
+                    <com.hjq.bar.TitleBar
+                        android:id="@+id/titlebar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/simpleBarHeight"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/appThemeColor"
+                        app:titleSize="17sp"
+                        app:backButton="false"
+                        app:titleStyle="bold"
+                        app:title="好友"
+                        app:rightTitle="加好友"
+                        app:lineVisible="false"
+                        app:rightColor="@color/white"
+                        app:titleColor="@color/white"
+                        />
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--        android:id="@+id/fab_scrolling"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_margin="@dimen/spacing_16"-->
+        <!--        android:src="@drawable/ic_share_white_24dp"-->
+        <!--        app:layout_anchor="@id/appbar_layout"-->
+        <!--        app:layout_anchorGravity="bottom|end" />-->
+
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            >-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="18dp"-->
+<!--                android:text="@string/large_text" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cbottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlClassicsSpinnerStyle="Translate"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingBottom="30dp"/>
+                <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlClassicsSpinnerStyle="Translate" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        </androidx.core.widget.NestedScrollView>-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

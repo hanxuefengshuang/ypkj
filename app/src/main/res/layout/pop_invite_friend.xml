@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邀请您的第一位好友"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF333333"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在地图上查看实时位置信息"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#FF333333"/>
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="75dp"
+                    android:src="@mipmap/safetyicon"
+                    android:layout_marginTop="25dp"
+                    />
+
+                <com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout
+                    android:id="@+id/btnInvite"
+                    android:layout_width="150dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/shape_theme_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="4dp"
+                        android:textColor="@color/white"
+                        android:text="立即邀请"/>
+
+                </com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@mipmap/close"
+            android:layout_marginTop="50dp"
+            />
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yuepeng.wxb">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- 用于ugc事件上报录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许绘制到oppo、vivo刘海屏机型的刘海区域 -->
+    <!-- 用于AR步行导航，需要使用相机权限，如果不需要AR歩导，则不需申请该权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 用于步骑行导航Demo中振动效果提示，开发者根据自己业务需求决定是否申请 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 获取允许应用程序更改Wi-Fi连接状态的权限，用于室内步行导航wifi定位,如果不需要室内步行导航功能则该权限无需申请 -->
+    <uses-permission android:name="android.Manifest.permission.CHANGE_WIFI_STATE" /> <!-- 以下不是鹰眼SDK需要的基础权限，可选 -->
+    <!-- 用于加快GPS首次定位，可选权限，非必须 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于Android M及以上系统，申请加入忽略电池优化白名单，可选权限，非必须 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- 用于导航中省电设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 诱导悬浮窗 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MANAGE_OVERLAY_PERMISSION" />
+
+    <meta-data
+        android:name="android.max_aspect"
+        android:value="2.4" /> <!-- 允许绘制到华为刘海屏机型的刘海区域 -->
+    <meta-data
+        android:name="android.notch_support"
+        android:value="true" /> <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_laucher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_laucher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.activity.NewMsgActivity"></activity>
+        <activity android:name=".ui.activity.DirectionsForUseActivity" />
+        <activity
+            android:name=".ui.activity.AddSafetyPlaceActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.PlayBellActivity" />
+        <activity android:name=".ui.activity.PrivacyPolicyActivity" />
+        <activity android:name=".ui.activity.AboutUsActivity" />
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.MessageListActivity" />
+        <activity android:name=".ui.activity.AddFriendActivity" />
+        <activity android:name=".ui.activity.ContactActivity" />
+        <activity android:name=".ui.activity.SafetyPlaceActivity" />
+        <activity android:name=".ui.activity.VipActivity" />
+        <activity
+            android:name=".ui.activity.MineInformationActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.GuideActivity" /> <!-- <activity android:name=".ui.SplashActivity"></activity> -->
+        <activity android:name=".ui.activity.DemoGuideActivity" />
+        <activity android:name=".ui.activity.MapSearchActivity" />
+        <activity android:name=".ui.activity.HisSportActivity" />
+        <activity android:name=".ui.activity.MapSportActivity" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".ui.activity.MapRouteSelecter2Activity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 百度key -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="yckLVpzs5wnd38F1T1bIGMmEW8CeSYbw" /> <!-- selfkey:Ahz8Gn9zlzZ08vBo3WI2sKkTo4k0wFia -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" /> <!-- 百度鹰眼轨迹服务 -->
+        <service
+            android:name="com.baidu.trace.LBSTraceService"
+            android:enabled="true"
+            android:process=":remote" />
+        <service android:name=".location.ForegroundService" />
+
+        <provider
+            android:name="com.wstro.thirdlibrary.utils.BuglyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_bugly"
+                tools:replace="name,resource" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/shape_open_vip_top"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="系统检测到您的亲友位置正在变化"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="109dp"
+                        android:layout_height="75dp"
+                        android:src="@mipmap/safetyicon"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_open_vip_bottom"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFBA875C"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:text="现在就解锁会员查看亲友"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:textColor="#FF333333"
+                        android:text="位置变动随时提醒"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:textColor="#FF333333"
+                        android:text="实时定位和移动轨迹跟踪"/>
+
+
+                    <com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout
+                        android:id="@+id/btnOpenVip"
+                        android:layout_width="150dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/shape_openvip_pop_btn"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_centerHorizontal="true"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:drawablePadding="4dp"
+                            android:textColor="#FF333333"
+                            android:textStyle="bold"
+                            android:textSize="17sp"
+                            android:text="立即解锁"/>
+
+                    </com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@mipmap/close"
+            android:layout_marginTop="50dp"
+            />
+    </LinearLayout>
+
+
+</layout>
